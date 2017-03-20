@@ -1,0 +1,40 @@
+.todo, .todo-block, .todo-text, .completed {
+  display: flex;
+}
+
+.todo{
+  margin-top: .5rem;
+  flex-direction: column;
+}
+
+.todo-text{
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.todo-text p, .completed p{
+  margin: 0;
+}
+
+.todo-delete {
+  cursor: pointer;
+}
+
+.date {
+  color: #b0b0b0;
+  padding-left: 2rem;
+}
+
+.message{
+  padding: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #b8b8b8;
+}
+
+.completed {
+  align-items: flex-start;
+  color: #b0b0b0;
+  text-decoration: line-through;
+  flex-grow: 1;
+}

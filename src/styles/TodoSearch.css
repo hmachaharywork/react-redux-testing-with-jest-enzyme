@@ -1,0 +1,6 @@
+.toggle-completed {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid#e3e3e3;
+}
