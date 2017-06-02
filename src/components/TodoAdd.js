@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 import './../styles/TodoAdd.css';
+import { addTodo } from './../actions/actions';
 
 class TodoAdd extends Component {
   constructor(props) {
@@ -11,9 +13,10 @@ class TodoAdd extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let { dispatch } = this.props;
     let todoText = this.todoText.value;
     if(todoText.length > 0) {
-      this.props.handleAdd(todoText);
+      dispatch(addTodo(todoText));
       this.todoText.value = '';
     }else {
       this.todoText.focus();
@@ -37,4 +40,4 @@ class TodoAdd extends Component {
   }
 }
 
-export default TodoAdd;
+export default connect()(TodoAdd);
